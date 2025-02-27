@@ -4,23 +4,17 @@ import "leaflet/dist/leaflet.css";
 import axios from "axios";
 import L from "leaflet";
 
-// Define custom icons for Source (Green) and Destination (Red)
+// Custom markers for Source (Green) and Destination (Red)
 const sourceIcon = new L.Icon({
-  iconUrl: "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png",
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/images/marker-shadow.png",
-  shadowSize: [41, 41],
+  iconUrl: "https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=S|00FF00|000000",
+  iconSize: [30, 50],
+  iconAnchor: [15, 50],
 });
 
 const destinationIcon = new L.Icon({
-  iconUrl: "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png",
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/images/marker-shadow.png",
-  shadowSize: [41, 41],
+  iconUrl: "https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=D|FF0000|000000",
+  iconSize: [30, 50],
+  iconAnchor: [15, 50],
 });
 
 // Component to adjust map bounds when the route updates
