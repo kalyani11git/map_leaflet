@@ -84,7 +84,7 @@ const MapComponent = () => {
       <form onSubmit={handleSubmit} style={{ display: "flex", gap: "10px", justifyContent: "center", alignItems: "center" }}>
         <input
           type="text"
-          placeholder="Enter Source "
+          placeholder="Enter Start Location"
           value={startLocation}
           onChange={(e) => setStartLocation(e.target.value)}
           required
@@ -107,7 +107,7 @@ const MapComponent = () => {
         </button>
         <input
           type="text"
-          placeholder="Enter Destination "
+          placeholder="Enter End Location"
           value={endLocation}
           onChange={(e) => setEndLocation(e.target.value)}
           required

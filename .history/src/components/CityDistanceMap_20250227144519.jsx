@@ -80,11 +80,11 @@ const MapComponent = () => {
 
   return (
     <div style={{ textAlign: "center", padding: "20px" }}>
-      <h2 className="text-2xl mb-5">Find Distance with Leaflet Map</h2>
+      <h2 className="text-2xl ">Find Distance with Leaflet Map</h2>
       <form onSubmit={handleSubmit} style={{ display: "flex", gap: "10px", justifyContent: "center", alignItems: "center" }}>
         <input
           type="text"
-          placeholder="Enter Source "
+          placeholder="Enter Start Location"
           value={startLocation}
           onChange={(e) => setStartLocation(e.target.value)}
           required
@@ -107,7 +107,7 @@ const MapComponent = () => {
         </button>
         <input
           type="text"
-          placeholder="Enter Destination "
+          placeholder="Enter End Location"
           value={endLocation}
           onChange={(e) => setEndLocation(e.target.value)}
           required
@@ -125,13 +125,13 @@ const MapComponent = () => {
             fontSize: "14px",
           }}
         >
-          Find
+          Find Route
         </button>
       </form>
 
       {distance && <h3>Distance: {distance} km</h3>}
 
-      <div  style={{ height: "400px", width: "90%", marginTop: "50px", margin: "auto", borderRadius: "10px", overflow: "hidden" }}>
+      <div style={{ height: "400px", width: "90%", marginTop: "20px", margin: "auto", borderRadius: "10px", overflow: "hidden" }}>
         <MapContainer key={mapKey} center={[20, 78]} zoom={5} style={{ height: "100%", width: "100%" }}>
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
           {routeCoords.length > 0 && (

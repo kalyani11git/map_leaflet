@@ -131,7 +131,7 @@ const MapComponent = () => {
 
       {distance && <h3>Distance: {distance} km</h3>}
 
-      <div  style={{ height: "400px", width: "90%", marginTop: "50px", margin: "auto", borderRadius: "10px", overflow: "hidden" }}>
+      <div className="mt-10"  style={{ height: "400px", width: "90%", marginTop: "50px", margin: "auto", borderRadius: "10px", overflow: "hidden" }}>
         <MapContainer key={mapKey} center={[20, 78]} zoom={5} style={{ height: "100%", width: "100%" }}>
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
           {routeCoords.length > 0 && (
